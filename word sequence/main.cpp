@@ -15,9 +15,7 @@ int main()
     string ending;
     getline(cin, ending);
 
-    regex word_regex("[\\w]+[" + ending + "][^\\s]+");
-    regex ending_regex("");
-    
+    regex word_regex("\\w*" + ending);
 
     auto words_begin = sregex_iterator(line.begin(), line.end(), word_regex);
     auto words_end = sregex_iterator();
